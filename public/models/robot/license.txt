@@ -1,0 +1,11 @@
+Model Information:
+* title:	A pkg sender low poly robot rigged in blockbench
+* source:	https://sketchfab.com/3d-models/a-pkg-sender-low-poly-robot-rigged-in-blockbench-72e62e32eb3c4eab934d0353174e3281
+* author:	ramdom_sp (https://sketchfab.com/spartanmelon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "A pkg sender low poly robot rigged in blockbench" (https://sketchfab.com/3d-models/a-pkg-sender-low-poly-robot-rigged-in-blockbench-72e62e32eb3c4eab934d0353174e3281) by ramdom_sp (https://sketchfab.com/spartanmelon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

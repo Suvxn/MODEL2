@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('./assets/fonts/ethnocentric/Ethnocentric-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Cosmic Palette */
+  --color-bg-deep: #020005;
+  /* Deep Space Void */
+  --color-bg-nebula: #0B001A;
+  /* Subtle Purple Tint */
+  --color-primary: #00F3FF;
+  /* Electric Cyan */
+  --color-secondary: #7000FF;
+  /* Nebula Purple */
+  --color-accent: #FF00E6;
+  /* Magenta Pop */
+  --color-text-main: #E2E8F0;
+  /* Starlight Silver */
+  --color-text-muted: #94A3B8;
+  /* Faded Star */
+
+  color-scheme: dark;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-deep);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  /* Subtle Gradient Background */
+  background: radial-gradient(circle at 50% 10%, var(--color-bg-nebula) 0%, var(--color-bg-deep) 60%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--color-primary);
+  color: #000;
+}
+
+#root {
+  width: 100%;
+}
