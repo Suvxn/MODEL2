@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { useGLTF, useAnimations, Stars, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { motion, AnimatePresence } from 'framer-motion';
-import solarSystemModel from '../assets/models/solar_system_animation/scene.gltf?url';
+const solarSystemModel = `${import.meta.env.BASE_URL}models/solar_system_animation/scene.gltf`.replace('//', '/');
 
 // Preload the model
 useGLTF.preload(solarSystemModel);
