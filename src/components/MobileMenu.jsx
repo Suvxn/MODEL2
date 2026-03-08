@@ -50,7 +50,7 @@ const MobileMenu = ({ navLinks, onNavigate }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl pt-32 px-6 flex flex-col items-center justify-start"
+            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-3xl pt-32 px-6 flex flex-col items-center justify-start pointer-events-auto"
         >
             <div className="flex flex-col gap-8 w-full max-w-md items-center">
                 {navLinks.map((link, i) => (
@@ -79,7 +79,7 @@ const MobileMenu = ({ navLinks, onNavigate }) => {
                         onClick={() => onNavigate('/contact')}
                         className="flex items-center gap-3 px-8 py-3 bg-white text-black rounded-full font-medium uppercase tracking-wide hover:scale-105 transition-transform"
                     >
-                        Start a Project
+                        Contact Us
                         <ArrowUpRight size={20} />
                     </button>
                 </motion.div>
