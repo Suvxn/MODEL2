@@ -39,7 +39,7 @@ const AppContent = () => {
       </AnimatePresence>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home isLoading={isLoading} />} />
         <Route path="/astronomica" element={<Astronomica />} />
         <Route path="/team" element={<Team />} />
         <Route path="/gallery" element={<Gallery />} />
