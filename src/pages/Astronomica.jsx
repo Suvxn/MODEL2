@@ -1,14 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import spaceBg1 from '../assets/images/space-bg.jpg';
 import spaceBg2 from '../assets/images/space-bg2.jpg';
 import spaceBg3 from '../assets/images/space-bg3.jpg';
+import spaceBg5 from '../assets/images/space-bg5.jpg';
 import posterImg from '../assets/images/poster.png';
 import brochurePdf from '../assets/docs/Brochure.pdf';
 import guidelinesPdf from '../assets/docs/Guidelines.pdf';
+import astrophotographyImg from '../assets/images/astrophotography.png';
+import moonImg from '../assets/images/moon.jpg';
+import moon2Img from '../assets/images/moon2.jpg';
+import galaxyImg from '../assets/images/galaxy.jpg';
+import grp1Img from '../assets/images/grp1.jpg';
+import grp2Img from '../assets/images/grp2.jpg';
+import grp3Img from '../assets/images/grp3.jpg';
+import grp4Img from '../assets/images/grp4.jpg';
+import starTalkImg from '../assets/images/star_talk.png';
 
 const bgImages = [spaceBg1, spaceBg2, spaceBg3];
+const galleryImages = [
+    astrophotographyImg,
+    moonImg,
+    moon2Img,
+    galaxyImg,
+    grp1Img,
+    grp2Img,
+    grp3Img,
+    grp4Img,
+    starTalkImg
+];
 
 const Astronomica = () => {
     const [currentBg, setCurrentBg] = useState(0);
@@ -140,7 +162,7 @@ const Astronomica = () => {
             </section>
 
             {/* Section 3: Events */}
-            <section className="relative w-full py-16 px-8 md:px-20 max-w-7xl mx-auto z-20">
+            <section className="relative w-full py-32 px-8 md:px-20 max-w-7xl mx-auto z-20">
                 {/* Heading Area */}
                 <div className="flex flex-col items-center justify-center w-full mb-16 relative">
                     <h3 className="text-[#E2E8F0] tracking-[0.5em] text-sm md:text-base font-['Quintessential'] uppercase z-10 relative">
@@ -240,6 +262,96 @@ const Astronomica = () => {
                         <span className="text-2xl leading-none">•</span> Guideline
                     </a>
                 </motion.div>
+            </section>
+
+            {/* Section 4: Gallery */}
+            <section className="relative w-full py-24 px-4 md:px-12 max-w-7xl mx-auto z-20">
+                {/* Heading Area */}
+                <div className="flex flex-col items-center justify-center w-full mb-16 relative">
+                    <h3 className="text-[#E2E8F0] tracking-[0.5em] text-sm md:text-base font-['Quintessential'] uppercase z-10 relative">
+                        ASTRONOMICA
+                    </h3>
+                    
+                    <div className="relative flex justify-center items-center mt-2 w-full">
+                        {/* Background Faded Text */}
+                        <span className="absolute text-7xl md:text-9xl font-['Beau_Rivage'] text-white/5 select-none tracking-wider -translate-y-2">
+                            Gallery
+                        </span>
+                        {/* Foreground Sharp Text */}
+                        <h2 className="text-5xl md:text-7xl font-['Beau_Rivage'] text-white z-10 drop-shadow-[0_0_15px_rgba(255,255,255,0.2)]">
+                            Gallery
+                        </h2>
+                    </div>
+                </div>
+
+                {/* Image Grid */}
+                <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                    {galleryImages.map((imgSrc, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            className="break-inside-avoid overflow-hidden rounded-xl bg-gray-900 border border-white/10"
+                        >
+                            <img 
+                                src={imgSrc} 
+                                alt={`Astronomica Gallery ${index + 1}`} 
+                                className="w-full h-auto object-cover"
+                            />
+                        </motion.div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Section 5: Contact Us */}
+            <section 
+                className="relative w-full min-h-[60vh] flex flex-col items-center justify-center text-center py-20 px-4"
+                style={{
+                    backgroundImage: `url(${spaceBg5})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundAttachment: 'fixed'
+                }}
+            >
+                {/* Dark Overlay for readability */}
+                <div className="absolute inset-0 bg-black/40 z-0"></div>
+
+                <div className="relative z-10 flex flex-col items-center">
+                    <motion.h3 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                        className="text-[#E2E8F0] tracking-[0.3em] md:tracking-[0.5em] text-xs md:text-sm font-['Quintessential'] uppercase mb-4 drop-shadow-md"
+                    >
+                        FOR ANY QUERIES
+                    </motion.h3>
+
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-5xl md:text-7xl font-['Quintessential'] font-light text-white mb-10 drop-shadow-lg tracking-widest"
+                    >
+                        Contact us
+                    </motion.h2>
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <Link to="/contact">
+                            <button className="px-10 py-3 bg-[#FF0055] text-white text-lg rounded-xl shadow-[0_6px_0_#990033,0_15px_20px_rgba(255,0,85,0.4)] hover:bg-[#ff1a66] hover:shadow-[0_4px_0_#990033,0_15px_30px_rgba(255,0,85,0.6)] hover:translate-y-[2px] active:shadow-[0_0px_0_#990033,0_10px_10px_rgba(255,0,85,0.4)] active:translate-y-[6px] transition-all duration-150 font-medium tracking-wide">
+                                Contact
+                            </button>
+                        </Link>
+                    </motion.div>
+                </div>
             </section>
         </div>
     );
