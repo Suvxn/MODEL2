@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import InitialLoader from './components/InitialLoader';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Astronomica from './pages/Astronomica';
 import Team from './pages/Team';
@@ -34,6 +35,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToTop />
       <AnimatePresence>
         {isLoading && <InitialLoader onComplete={handleLoaderComplete} />}
       </AnimatePresence>
